@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:priva_socialmedia/colors.dart';
+import 'package:priva_socialmedia/responsive/responsive_layout.dart';
+import 'package:priva_socialmedia/screens/mobile_screen_layout.dart';
+import 'package:priva_socialmedia/screens/web_screen_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +17,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Priva',
-        theme: ThemeData.dark().copyWith(
-          backgroundColor: backgroundColor,
-        ),
-        home: const Text('Priva'));
+      debugShowCheckedModeBanner: false,
+      title: 'Priva',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
+      ),
+      home: const ResponsiveLayout(
+        mobileScreenLayout: MobileScreenLayout(),
+        webScreenLayout: WebScreenLayout(),
+      ),
+    );
   }
 }

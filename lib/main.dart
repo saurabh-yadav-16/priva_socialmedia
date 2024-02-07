@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/colors.dart';
+import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/responsive/responsive_layout.dart';
 import 'package:priva_socialmedia/screens/mobile_screen_layout.dart';
 import 'package:priva_socialmedia/screens/web_screen_layout.dart';

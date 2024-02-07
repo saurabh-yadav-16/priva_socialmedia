@@ -21,10 +21,13 @@ class WebScreenLayout extends StatelessWidget {
           ),
         ),
         Container(
-          width: MediaQuery.of(context).size.width * 0.75,
+          width: MediaQuery.of(context).size.width * 0.7,
           decoration: const BoxDecoration(
-              image: DecorationImage(image: 'assests / backgroudImage.png'),
-              fit: BoxFit.cover),
+            image: DecorationImage(
+              image: AssetImage('assests\\backgroundImage.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
       ],
     ));

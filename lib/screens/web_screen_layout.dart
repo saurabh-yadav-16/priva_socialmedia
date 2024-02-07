@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/widgets/contacts_list.dart';
 
 class WebScreenLayout extends StatelessWidget {
@@ -6,30 +7,80 @@ class WebScreenLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                //profile bar
-                ContactList(),
-              ],
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          elevation: 0,
+          title: const Text('Priva',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              )),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {
+                // Add your search button action here
+              },
             ),
-          ),
+            IconButton(
+              icon: const Icon(Icons.more_vert),
+              onPressed: () {
+                // Add your  actions here
+              },
+            )
+          ],
+          bottom: const TabBar(
+              indicatorColor: tabColor,
+              indicatorWeight: 4,
+              labelColor: tabColor,
+              unselectedLabelColor: Colors.grey,
+              labelStyle: TextStyle(fontWeight: FontWeight.bold),
+              tabs: [
+                Tab(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.home),
+                      SizedBox(width: 8),
+                      Text('Home')
+                    ],
+                  ),
+                ),
+                Tab(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.message),
+                      SizedBox(width: 8),
+                      Text('Messages')
+                    ],
+                  ),
+                ),
+                Tab(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.person),
+                      SizedBox(width: 8),
+                      Text('Profile')
+                    ],
+                  ),
+                )
+              ]),
         ),
-        Container(
-          width: MediaQuery.of(context).size.width * 0.7,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assests\\backgroundImage.png'),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      ],
-    ));
+        body: const ContactList(),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: tabColor,
+            child: const Icon(
+              Icons.comment,
+              color: Colors.white,
+            )),
+      ),
+    );
   }
 }

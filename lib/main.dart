@@ -6,7 +6,11 @@ import 'package:priva_socialmedia/responsive/responsive_layout.dart';
 import 'package:priva_socialmedia/screens/mobile_screen_layout.dart';
 import 'package:priva_socialmedia/screens/web_screen_layout.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

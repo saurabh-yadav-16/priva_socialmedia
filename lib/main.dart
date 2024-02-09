@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
 import 'package:priva_socialmedia/firebase_options.dart';
+import 'package:priva_socialmedia/router.dart';
 import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/responsive/responsive_layout.dart';
 import 'package:priva_socialmedia/screens/mobile_screen_layout.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
+      onGenerateRoute: (settings) => generateRoute(settings),
       home: const LandingScreen(),
     );
   }

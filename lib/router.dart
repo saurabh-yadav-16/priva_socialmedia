@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:priva_socialmedia/common/widgets/error.dart';
 import 'package:priva_socialmedia/features/auth/screens/login_screen.dart';
+import 'package:priva_socialmedia/features/auth/screens/otp_screen.dart';
 import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,6 +10,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const LandingScreen());
     case LoginScreen.routeName:
       return MaterialPageRoute(builder: (_) => const LoginScreen());
+    case OTPscreen.routeName:
+      final verificationId = settings.arguments as String;
+      return MaterialPageRoute(
+          builder: (_) => OTPscreen(
+                verificationId: verificationId,
+              ));
     default:
       return MaterialPageRoute(builder: (_) {
         return const Scaffold(

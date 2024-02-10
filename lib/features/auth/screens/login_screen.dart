@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 20), // Add SizedBox here
+              SizedBox(height: 40), // Add SizedBox here
               const SizedBox(height: 10),
               GestureDetector(
                 onTap: pickCountry, // Attach pickCountry function here

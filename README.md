@@ -24,3 +24,5 @@ The project relies on the following dependencies:
 - [Other features]
 
 For more information on Flutter development, refer to the [online documentation](https://docs.flutter.dev/).
+
+2:26

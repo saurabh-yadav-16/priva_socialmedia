@@ -4,6 +4,8 @@ import 'package:priva_socialmedia/features/auth/screens/login_screen.dart';
 import 'package:priva_socialmedia/features/auth/screens/otp_screen.dart';
 import 'package:priva_socialmedia/features/auth/screens/user_information_screen.dart';
 import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
+import 'package:priva_socialmedia/features/select_contacts/screens/select_contacts_screen.dart';
+import 'package:priva_socialmedia/features/chat/screens/mobile_chat_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -19,6 +21,17 @@ Route<dynamic> generateRoute(RouteSettings settings) {
               ));
     case UserInformationScreen.routeName:
       return MaterialPageRoute(builder: (_) => const UserInformationScreen());
+    case SelectContactsScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const SelectContactsScreen());
+    case MobileChatScreen.routeName:
+      final arguments = settings.arguments as Map<String, dynamic>;
+      final name = arguments['name'] as String;
+      final uid = arguments['uid'] as String;
+      return MaterialPageRoute(
+          builder: (_) => MobileChatScreen(
+                name: name,
+                uid: uid,
+              ));
     default:
       return MaterialPageRoute(builder: (_) {
         return const Scaffold(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/widgets/info.dart';
 import 'package:priva_socialmedia/widgets/my_message_card.dart';
 import 'package:priva_socialmedia/widgets/sender_message_card.dart';

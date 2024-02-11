@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
+import 'package:priva_socialmedia/colors.dart';
 import 'package:priva_socialmedia/widgets/info.dart';
-import 'package:priva_socialmedia/widgets/mobile_chat_screen.dart';
+import 'package:priva_socialmedia/features/chat/screens/mobile_chat_screen.dart';
 
 class ContactList extends StatelessWidget {
   const ContactList({super.key});
@@ -18,9 +18,14 @@ class ContactList extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            const MobileChatScreen())); // Remove the 'const' keyword and add the missing positional argument if necessary
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const MobileChatScreen(
+                          name: 'name',
+                          uid: 'uid',
+                        ),
+                      ),
+                    ); // Remove the 'const' keyword and add the missing positional argument if necessary
                   },
                   child: Padding(
                       padding: const EdgeInsets.only(bottom: 8),

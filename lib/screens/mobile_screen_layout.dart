@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
+import 'package:priva_socialmedia/colors.dart';
+import 'package:priva_socialmedia/features/select_contacts/screens/select_contacts_screen.dart';
 import 'package:priva_socialmedia/widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {
@@ -78,28 +79,76 @@ class MobileScreenLayout extends StatelessWidget {
         body: TabBarView(
           children: [
             // Home Tab View
-            Container(
-              child: const Center(
-                child: Text('Home Tab Content'),
-              ),
+            Stack(
+              children: [
+                Container(
+                  child: const Center(
+                    child: Text('Home Tab Content'),
+                  ),
+                ),
+                Positioned(
+                  bottom: 16,
+                  right: 16,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      // Add your action for the floating button on the Home tab
+                    },
+                    backgroundColor: tabColor,
+                    child: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
             // Messages Tab View
-            const ContactList(), // Show ContactList only when on Message tab
-            // Profile Tab View
-            Container(
-              child: const Center(
-                child: Text('Profile Tab Content'),
-              ),
+            Stack(
+              children: [
+                const ContactList(), // Show ContactList only when on Message tab
+                Positioned(
+                  bottom: 16,
+                  right: 16,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, SelectContactsScreen.routeName);
+                    },
+                    backgroundColor: tabColor,
+                    child: const Icon(
+                      Icons.comment,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            // Call Log Tab View
+            Stack(
+              children: [
+                Container(
+                  child: const Center(
+                    child: Text('Call Log'),
+                  ),
+                ),
+                Positioned(
+                  bottom: 16,
+                  right: 16,
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, SelectContactsScreen.routeName);
+                    },
+                    backgroundColor: tabColor,
+                    child: const Icon(
+                      Icons.call,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: tabColor,
-          child: const Icon(
-            Icons.comment,
-            color: Colors.white,
-          ),
         ),
       ),
     );

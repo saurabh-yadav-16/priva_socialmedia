@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
-import 'package:priva_socialmedia/widgets/info.dart';
+import 'package:priva_socialmedia/colors.dart';
 
 class SenderMessageCard extends StatelessWidget {
   final String message;

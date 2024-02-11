@@ -1,17 +1,20 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/common/widgets/custom_button.dart';
+import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
 import 'package:priva_socialmedia/widgets/colors.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends ConsumerStatefulWidget {
   static const String routeName = '/login-screen';
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  ConsumerState<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends ConsumerState<LoginScreen> {
   final phoneController = TextEditingController();
   Country? country;
 
@@ -23,13 +26,30 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void pickCountry() {
     showCountryPicker(
+      favorite: ['IN'],
       context: context,
+      showPhoneCode: true, // Add this line to show the country code
       onSelect: (Country country) {
         setState(() {
           this.country = country;
         });
       },
     );
+  }
+
+  void sendPhoneNumber() {
+    final phoneNumber = phoneController.text.trim();
+    if (country != null && phoneNumber.isNotEmpty) {
+      final fullPhoneNumber = '+${country?.phoneCode}$phoneNumber';
+      ref
+          .read(authControllerProvider)
+          .signInWithPhone(context, fullPhoneNumber);
+    } else {
+      showSnackbar(
+        context: context,
+        content: 'Please enter a valid phone number',
+      );
+    }
   }
 
   @override
@@ -64,36 +84,57 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 40), // Add SizedBox here
+              const SizedBox(height: 40), // Add SizedBox here
               const SizedBox(height: 10),
               GestureDetector(
                 onTap: pickCountry, // Attach pickCountry function here
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      '+${country?.phoneCode ?? '00 '}',
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                    Container(
+                      width: 80, // Reduce width of country code box
+                      height: 60, // Increase height of country code box
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal:
+                                    8.0), // Reduce space between code and icon
+                            child: Text(
+                              '+${country?.phoneCode ?? '00 '}',
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Icon(Icons.arrow_drop_down),
+                        ],
                       ),
                     ),
                     const SizedBox(width: 10),
                     SizedBox(
-                      width: size.width * 0.7,
+                      width: size.width * 0.6,
                       child: TextField(
                         controller: phoneController,
-                        decoration: InputDecoration(
+                        keyboardType: TextInputType.number,
+                        style: const TextStyle(fontSize: 18),
+                        decoration: const InputDecoration(
                           hintText: 'Phone number',
-                          contentPadding: const EdgeInsets.all(15.0),
+                          contentPadding: EdgeInsets.all(15),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5.0),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(5.0)),
                           ),
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: tabColor,
-                              width: 2.0,
-                            ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: tabColor, width: 2.0),
                           ),
                         ),
                       ),
@@ -107,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 width: 90,
                 child: CustomButton(
-                  onPressed: () {},
+                  onPressed: sendPhoneNumber,
                   text: 'Next',
                   color: tabColor,
                   textColor: Colors.white,

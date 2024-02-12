@@ -1,6 +1,6 @@
 const info = [
   {
-    'name': 'Rivaan Ranawat',
+    'name': 'Saurabh Yadav',
     'message': 'Hey, how are you doing?',
     'time': '3:53 pm',
     'profilePic':
@@ -93,7 +93,7 @@ const messages = [
   },
   {
     "isMe": false,
-    "text": "Rivaan Ranawat",
+    "text": "Saurabh Yadav",
     "time": "11:06 am",
   },
   {

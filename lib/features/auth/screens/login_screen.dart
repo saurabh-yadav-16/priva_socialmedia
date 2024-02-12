@@ -57,7 +57,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        actions: [],
+        actions: const [],
         title: const Text(
           'Enter your phone number',
           textAlign: TextAlign.center,
@@ -115,7 +115,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                               ),
                             ),
                           ),
-                          Icon(Icons.arrow_drop_down),
+                          const Icon(Icons.arrow_drop_down),
                         ],
                       ),
                     ),

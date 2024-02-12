@@ -1,9 +1,12 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
+import 'package:priva_socialmedia/features/select_contacts/screens/select_contacts_screen.dart';
 import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {
-  const MobileScreenLayout({Key? key}) : super(key: key);
+  const MobileScreenLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +97,9 @@ class MobileScreenLayout extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, SelectContactsScreen.routeName);
+          },
           backgroundColor: tabColor,
           child: const Icon(
             Icons.comment,

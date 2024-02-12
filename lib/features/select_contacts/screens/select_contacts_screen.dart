@@ -7,7 +7,7 @@ import 'package:priva_socialmedia/features/select_contacts/controller/select_con
 
 class SelectContactsScreen extends ConsumerWidget {
   static const String routeName = '/select-contact';
-  const SelectContactsScreen({Key? key}) : super(key: key);
+  const SelectContactsScreen({super.key});
 
   void selectContact(
       WidgetRef ref, Contact selectedContact, BuildContext context) {

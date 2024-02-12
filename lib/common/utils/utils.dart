@@ -11,7 +11,7 @@ void showSnackBar({required BuildContext context, required String content}) {
     SnackBar(
       content: Text(
         content,
-        style: TextStyle(fontSize: 18),
+        style: const TextStyle(fontSize: 18),
       ),
       duration: const Duration(seconds: 1), // Set the duration to 2 seconds
     ),

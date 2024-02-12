@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/widgets/info.dart';

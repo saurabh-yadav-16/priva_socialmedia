@@ -45,7 +45,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           .read(authControllerProvider)
           .signInWithPhone(context, fullPhoneNumber);
     } else {
-      showSnackbar(
+      showSnackBar(
         context: context,
         content: 'Please enter a valid phone number',
       );

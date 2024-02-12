@@ -3,7 +3,7 @@ import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {
-  const MobileScreenLayout({Key? key});
+  const MobileScreenLayout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

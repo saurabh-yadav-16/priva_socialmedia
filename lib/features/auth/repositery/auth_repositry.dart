@@ -11,7 +11,7 @@ import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/features/auth/screens/otp_screen.dart';
 import 'package:priva_socialmedia/features/auth/screens/user_information_screen.dart';
 import 'package:priva_socialmedia/models/user_model.dart';
-import 'package:priva_socialmedia/screens/mobile_screen_layout.dart';
+import 'package:priva_socialmedia/screens/mobile_layout_screen.dart';
 
 final authReposistryprovider = Provider(
   (ref) => AuthReposistry(
@@ -26,6 +26,17 @@ class AuthReposistry {
 
   AuthReposistry({required this.auth, required this.firestore});
 
+  Future<UserModel?> getCurrentUserData() async {
+    var userData =
+        await firestore.collection('users').doc(auth.currentUser?.uid).get();
+
+    UserModel? user;
+    if (userData.data() != null) {
+      user = UserModel.fromMap(userData.data()!);
+    }
+    return user;
+  }
+
   void signInWithPhone(BuildContext context, String phoneNumber) async {
     try {
       await FirebaseAuth.instance.verifyPhoneNumber(
@@ -34,7 +45,7 @@ class AuthReposistry {
           await FirebaseAuth.instance.signInWithCredential(credential);
         },
         verificationFailed: (FirebaseAuthException e) {
-          showSnackbar(context: context, content: e.message!);
+          showSnackBar(context: context, content: e.message!);
         },
         codeSent: (String verificationId, int? resendToken) {
           Navigator.pushNamed(context, OTPScreen.routeName,
@@ -45,7 +56,7 @@ class AuthReposistry {
         },
       );
     } on FirebaseAuthException catch (e) {
-      showSnackbar(context: context, content: e.message!);
+      showSnackBar(context: context, content: e.message!);
     }
   }
 
@@ -66,7 +77,7 @@ class AuthReposistry {
         (route) => false,
       );
     } on FirebaseAuthException catch (e) {
-      showSnackbar(
+      showSnackBar(
         context: context,
         content: e.message!,
       );
@@ -87,7 +98,10 @@ class AuthReposistry {
       if (profilePic != null) {
         photoUrl = await ref
             .read(commonFirebaseStorageRepositoryProvider)
-            .storeFileToFirebase('profilePic/$uid', profilePic);
+            .storeFileToFirebase(
+              'profilePic/$uid',
+              profilePic,
+            );
       }
 
       var user = UserModel(
@@ -109,7 +123,7 @@ class AuthReposistry {
         (route) => false,
       );
     } catch (e) {
-      showSnackbar(
+      showSnackBar(
         context: context,
         content: e.toString(),
       );
@@ -129,7 +143,7 @@ class AuthReposistry {
       });
     }
 
-    showSnackbar(
+    showSnackBar(
       context: context,
       content: 'Please enter a valid phone number',
     );

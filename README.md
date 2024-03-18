@@ -1,4 +1,4 @@
-# priva_socialmedia
+# Priva socialmedia
 
 This is a Flutter project for a private social media application.
 
@@ -10,8 +10,8 @@ The priva_socialmedia project aims to create a secure and private social media p
 
 The project relies on the following dependencies:
 
-- Flutter: [version]
-- Firebase: [version]
+- Flutter
+- Firebase
 - [Other dependencies]
 
 ## Features
@@ -21,6 +21,4 @@ The project relies on the following dependencies:
 - Privacy settings to control visibility of user's content
 - News feed with personalized content
 - Photo and video sharing
-- [Other features]
 
-For more information on Flutter development, refer to the [online documentation](https://docs.flutter.dev/).

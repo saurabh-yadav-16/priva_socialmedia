@@ -11,8 +11,10 @@ The priva_socialmedia project aims to create a secure and private social media p
 The project relies on the following dependencies:
 
 - Flutter
-- Firebase
-- [Other dependencies]
+- Firebase Auth
+- Riverpod
+
+
 
 ## Features
 

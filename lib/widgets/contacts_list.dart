@@ -3,6 +3,7 @@ import 'package:priva_socialmedia/widgets/colors.dart';
 import 'package:priva_socialmedia/widgets/info.dart';
 import 'package:priva_socialmedia/widgets/mobile_chat_screen.dart';
 
+/// A widget that displays a list of contacts.
 class ContactList extends StatelessWidget {
   const ContactList({super.key});
 

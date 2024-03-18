@@ -10,11 +10,16 @@ import 'package:priva_socialmedia/router.dart';
 import 'package:priva_socialmedia/screens/mobile_layout_screen.dart';
 import 'package:priva_socialmedia/widgets/colors.dart';
 
+// Initialize Firebase and run the app
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase with the default options for the current platform
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Run the app wrapped in a ProviderScope
   runApp(
     const ProviderScope(
       child: MyApp(),
@@ -22,32 +27,42 @@ void main() async {
   );
 }
 
+// The main app widget
 class MyApp extends ConsumerWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Whatsapp UI',
+
+      // Set the dark theme for the app
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
         appBarTheme: const AppBarTheme(
           color: appBarColor,
         ),
       ),
+
+      // Define the route generator for the app
       onGenerateRoute: (settings) => generateRoute(settings),
+
+      // Set the home screen based on the user's authentication state
       home: Consumer(
         builder: (context, ref, child) {
           final userAsyncValue = ref.watch(userDataAuthProvider);
           return userAsyncValue.when(
             data: (user) {
               if (user == null) {
+                // Show the landing screen if the user is not authenticated
                 return const LandingScreen();
               }
+              // Show the main app screen if the user is authenticated
               return const MobileScreenLayout();
             },
             error: (err, trace) {
+              // Show an error screen if there is an error fetching user data
               return ErrorScreen(
                 error: err.toString(),
               );

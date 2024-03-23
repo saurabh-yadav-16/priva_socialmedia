@@ -35,7 +35,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Whatsapp UI',
+      title: 'Priva UI',
 
       // Set the dark theme for the app
       theme: ThemeData.dark().copyWith(

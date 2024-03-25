@@ -6,7 +6,7 @@ import 'package:priva_socialmedia/common/widgets/loader.dart';
 import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
 import 'package:priva_socialmedia/models/user_model.dart';
 import 'package:priva_socialmedia/widgets/chat_list.dart';
-import 'colors.dart';
+import 'package:priva_socialmedia/common/utils/colors.dart';
 
 class MobileChatScreen extends ConsumerWidget {
   static const String routeName = '/mobile-chat-screen';

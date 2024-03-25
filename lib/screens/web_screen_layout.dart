@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
+import 'package:priva_socialmedia/common/utils/colors.dart';
 import 'package:priva_socialmedia/widgets/contacts_list.dart';
 
 class WebScreenLayout extends StatelessWidget {

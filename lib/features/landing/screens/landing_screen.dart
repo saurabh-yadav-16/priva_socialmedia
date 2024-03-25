@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:priva_socialmedia/common/widgets/custom_button.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
+import 'package:priva_socialmedia/common/utils/colors.dart';
 import 'package:priva_socialmedia/features/auth/screens/login_screen.dart';
 
 class LandingScreen extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/features/auth/repositery/auth_repositry.dart';
+import 'package:priva_socialmedia/features/auth/repository/auth_repository.dart';
 import 'package:priva_socialmedia/models/user_model.dart';
 
 final authControllerProvider = Provider((ref) {

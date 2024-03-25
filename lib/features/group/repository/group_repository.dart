@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
-import 'package:priva_socialmedia/common/repositories/common_firebase_storage_repository.dart';
+import 'package:priva_socialmedia/common/repository/common_firebase_storage_repository.dart';
 import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/models/group.dart' as model;
 

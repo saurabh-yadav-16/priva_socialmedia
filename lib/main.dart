@@ -8,7 +8,7 @@ import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
 import 'package:priva_socialmedia/firebase_options.dart';
 import 'package:priva_socialmedia/router.dart';
 import 'package:priva_socialmedia/screens/mobile_layout_screen.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
+import 'package:priva_socialmedia/common/utils/colors.dart';
 
 // Initialize Firebase and run the app
 void main() async {

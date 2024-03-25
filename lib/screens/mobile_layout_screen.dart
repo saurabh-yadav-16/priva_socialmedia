@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:priva_socialmedia/features/select_contacts/screens/select_contacts_screen.dart';
-import 'package:priva_socialmedia/widgets/colors.dart';
+import 'package:priva_socialmedia/common/utils/colors.dart';
 import 'package:priva_socialmedia/widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {

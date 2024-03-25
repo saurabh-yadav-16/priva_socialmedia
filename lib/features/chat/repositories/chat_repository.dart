@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 import 'package:priva_socialmedia/common/enums/message_enum.dart';
 import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
-import 'package:priva_socialmedia/common/repositories/common_firebase_storage_repository.dart';
+import 'package:priva_socialmedia/common/common_firebase_storage_repository.dart';
 import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/models/chat_contact.dart';
 import 'package:priva_socialmedia/models/group.dart';

@@ -70,10 +70,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         elevation: 0,
         backgroundColor: backgroundColor,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
                 'Please enter your phone number to verify your account.',

@@ -119,7 +119,7 @@ class ChatRepository {
         'timeSent': DateTime.now().millisecondsSinceEpoch,
       });
     } else {
-// users -> reciever user id => chats -> current user id -> set data
+      // users -> reciever user id => chats -> current user id -> set data
       var recieverChatContact = ChatContact(
         name: senderUserData.name,
         profilePic: senderUserData.profilePic,

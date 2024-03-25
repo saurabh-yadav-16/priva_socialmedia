@@ -7,11 +7,13 @@ import 'package:priva_socialmedia/features/select_contacts/controller/select_con
 
 class SelectContactsScreen extends ConsumerWidget {
   static const String routeName = '/select-contact';
-  const SelectContactsScreen({super.key});
+  const SelectContactsScreen({Key? key}) : super(key: key);
 
   void selectContact(
       WidgetRef ref, Contact selectedContact, BuildContext context) {
-    ref.read(selectContactControllerProvider).selectContact(selectedContact, context);
+    ref
+        .read(selectContactControllerProvider)
+        .selectContact(selectedContact, context);
   }
 
   @override

@@ -1,13 +1,10 @@
-// ignore_for_file: use_build_context_synchronously, unused_import
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/models/user_model.dart';
-import 'package:priva_socialmedia/widgets/mobile_chat_screen.dart';
-import 'package:priva_socialmedia/router.dart';
+import 'package:priva_socialmedia/features/chat/screens/mobile_chat_screen.dart';
 
 final selectContactsRepositoryProvider = Provider(
   (ref) => SelectContactRepository(

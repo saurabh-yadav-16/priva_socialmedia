@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/features/auth/screens/otp_screen.dart';
 import 'package:priva_socialmedia/features/auth/screens/user_information_screen.dart';
 import 'package:priva_socialmedia/models/user_model.dart';
-import 'package:priva_socialmedia/screens/mobile_layout_screen.dart';
+import 'package:priva_socialmedia/mobile_layout_screen.dart';
 
 final authRepositoryProvider = Provider(
   (ref) => AuthRepository(
@@ -25,17 +26,13 @@ class AuthRepository {
     required this.firestore,
   });
 
-  // Get Current User Data
   Future<UserModel?> getCurrentUserData() async {
-    UserModel? user;
-    // Ensure there's an authenticated user
-    if (auth.currentUser != null) {
-      var userData =
-          await firestore.collection('users').doc(auth.currentUser?.uid).get();
+    var userData =
+        await firestore.collection('users').doc(auth.currentUser?.uid).get();
 
-      if (userData.data() != null) {
-        user = UserModel.fromMap(userData.data()!);
-      }
+    UserModel? user;
+    if (userData.data() != null) {
+      user = UserModel.fromMap(userData.data()!);
     }
     return user;
   }
@@ -75,7 +72,6 @@ class AuthRepository {
         smsCode: userOTP,
       );
       await auth.signInWithCredential(credential);
-      // ignore: use_build_context_synchronously
       Navigator.pushNamedAndRemoveUntil(
         context,
         UserInformationScreen.routeName,
@@ -120,7 +116,7 @@ class AuthRepository {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
-          builder: (context) => const MobileScreenLayout(),
+          builder: (context) => const MobileLayoutScreen(),
         ),
         (route) => false,
       );

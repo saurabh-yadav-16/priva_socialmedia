@@ -4,7 +4,7 @@ import 'package:priva_socialmedia/common/utils/colors.dart';
 import 'package:priva_socialmedia/features/auth/screens/login_screen.dart';
 
 class LandingScreen extends StatelessWidget {
-  const LandingScreen({super.key});
+  const LandingScreen({Key? key}) : super(key: key);
 
   void _navigateToLogin(BuildContext context) {
     Navigator.pushNamed(context, LoginScreen.routeName);

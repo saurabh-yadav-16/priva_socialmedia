@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:swipe_to/swipe_to.dart';
 import 'package:priva_socialmedia/common/utils/colors.dart';
 import 'package:priva_socialmedia/common/enums/message_enum.dart';
-//import 'package:priva_socialmedia/features/chat/widgets/display_text_image_gif.dart';
+import 'package:priva_socialmedia/features/chat/widgets/display_text_image_gif.dart';
 
 class MyMessageCard extends StatelessWidget {
   final String message;
   final String date;
   final MessageEnum type;
-  final VoidCallback onLeftSwipe;
+  final void Function(DragUpdateDetails) onLeftSwipe;
   final String repliedText;
   final String username;
   final MessageEnum repliedMessageType;
@@ -31,7 +31,7 @@ class MyMessageCard extends StatelessWidget {
     final isReplying = repliedText.isNotEmpty;
 
     return SwipeTo(
-      onLeftSwipe: onLeftSwipe,
+      onLeftSwipe: (details) => onLeftSwipe(details),
       child: Align(
         alignment: Alignment.centerRight,
         child: ConstrainedBox(

@@ -11,6 +11,7 @@ import 'package:priva_socialmedia/features/chat/screens/mobile_chat_screen.dart'
 import 'package:priva_socialmedia/features/status/screens/confirm_status_screen.dart';
 import 'package:priva_socialmedia/features/status/screens/status_screen.dart';
 import 'package:priva_socialmedia/models/status_model.dart';
+import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
 
 /// Generates the appropriate route based on the provided [settings].
 /// Returns a [MaterialPageRoute] for each route.

@@ -6,11 +6,11 @@ import 'package:intl/intl.dart';
 import 'package:priva_socialmedia/common/enums/message_enum.dart';
 import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
 import 'package:priva_socialmedia/common/widgets/loader.dart';
-
 import 'package:priva_socialmedia/features/chat/controller/chat_controller.dart';
 import 'package:priva_socialmedia/features/chat/widgets/my_message_card.dart';
 import 'package:priva_socialmedia/features/chat/widgets/sender_message_card.dart';
 import 'package:priva_socialmedia/models/message.dart';
+
 
 class ChatList extends ConsumerStatefulWidget {
   final String recieverUserId;
@@ -38,6 +38,7 @@ class _ChatListState extends ConsumerState<ChatList> {
     String message,
     bool isMe,
     MessageEnum messageEnum,
+    DragUpdateDetails details,
   ) {
     ref.read(messageReplyProvider.state).update(
           (state) => MessageReply(
@@ -93,10 +94,11 @@ class _ChatListState extends ConsumerState<ChatList> {
                   repliedText: messageData.repliedMessage,
                   username: messageData.repliedTo,
                   repliedMessageType: messageData.repliedMessageType,
-                  onLeftSwipe: () => onMessageSwipe(
+                  onLeftSwipe: (details) => onMessageSwipe(
                     messageData.text,
                     true,
                     messageData.type,
+                    details,
                   ),
                   isSeen: messageData.isSeen,
                 );
@@ -107,10 +109,11 @@ class _ChatListState extends ConsumerState<ChatList> {
                 type: messageData.type,
                 username: messageData.repliedTo,
                 repliedMessageType: messageData.repliedMessageType,
-                onRightSwipe: () => onMessageSwipe(
+                onRightSwipe: (details) => onMessageSwipe(
                   messageData.text,
                   false,
                   messageData.type,
+                  details,
                 ),
                 repliedText: messageData.repliedMessage,
               );

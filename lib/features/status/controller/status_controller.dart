@@ -23,7 +23,7 @@ class StatusController {
   });
 
   void addStatus(File file, BuildContext context) {
-    ref.watch(userDataAuthProvider).whenData((value) {
+    ref.read(userDataAuthProvider).whenData((value) {
       statusRepository.uploadStatus(
         username: value!.name,
         profilePic: value.profilePic,

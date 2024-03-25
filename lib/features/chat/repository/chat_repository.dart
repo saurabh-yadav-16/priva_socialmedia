@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 import 'package:priva_socialmedia/common/enums/message_enum.dart';
 import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
-import 'package:priva_socialmedia/common/common_firebase_storage_repository.dart';
+import 'package:priva_socialmedia/common/repository/common_firebase_storage_repository.dart';
 import 'package:priva_socialmedia/common/utils/utils.dart';
 import 'package:priva_socialmedia/models/chat_contact.dart';
 import 'package:priva_socialmedia/models/group.dart';
@@ -227,6 +227,7 @@ class ChatRepository {
     required MessageReply? messageReply,
     required bool isGroupChat,
   }) async {
+    // users -> sender id -> reciever id -> messages -> message id -> store message
     try {
       var timeSent = DateTime.now();
       UserModel? recieverUserData;

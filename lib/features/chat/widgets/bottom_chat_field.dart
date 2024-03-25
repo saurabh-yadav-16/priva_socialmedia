@@ -111,10 +111,10 @@ class _BottomChatFieldState extends ConsumerState<BottomChatField> {
 
   void selectGIF() async {
     final gif = await pickGIF(context);
-    if (gif != null) {
+    if (gif != null && gif.url != null) {
       ref.read(chatControllerProvider).sendGIFMessage(
             context,
-            gif.url,
+            gif.url!,
             widget.recieverUserId,
             widget.isGroupChat,
           );

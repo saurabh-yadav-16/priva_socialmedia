@@ -44,6 +44,7 @@ dependencies:
   flutter_riverpod: ^2.4.10
   giphy_picker: ^3.0.1
   flutter_contacts: ^1.1.7+1
+  cached_video_player: ^2.0.4
 
 dev_dependencies:
   flutter_test:

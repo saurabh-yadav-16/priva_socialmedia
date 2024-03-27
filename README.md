@@ -1,10 +1,10 @@
 # Priva socialmedia
 
-This is a Flutter project for a private social media application.
+This is a Flutter project for a Private social media application.
 
 ## Description
 
-The Priva project aims to create a secure and private social media platform. It provides users with a safe space to connect and share content with their friends and family, without compromising their privacy.
+The Priva project aims to create a secure and Private social media platform. It provides users with a safe space to connect and share content with their friends and family, without compromising their Privacy.
 
 ## Dependencies
 

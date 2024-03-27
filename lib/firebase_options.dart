@@ -56,7 +56,7 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBzaUSOC7TLG4VgMRS6X_AwDkrLs6iRE60',
     appId: '1:511736524993:android:1b5ee9d5fcba00d664e440',
     messagingSenderId: '511736524993',
-    projectId: 'priva-socialmedia',
-    storageBucket: 'priva-socialmedia.appspot.com',
+    projectId: 'Priva-socialmedia',
+    storageBucket: 'Priva-socialmedia.appspot.com',
   );
 }

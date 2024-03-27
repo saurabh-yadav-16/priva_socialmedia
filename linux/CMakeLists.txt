@@ -7,7 +7,7 @@ project(runner LANGUAGES CXX)
 set(BINARY_NAME "Priva")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
-set(APPLICATION_ID "com.priva.socialmedia")
+set(APPLICATION_ID "com.Priva.socialmedia")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
@@ -41,9 +41,9 @@ endif()
 # of modifying this function.
 function(APPLY_STANDARD_SETTINGS TARGET)
   target_compile_features(${TARGET} PUBLIC cxx_std_14)
-  target_compile_options(${TARGET} PRIVATE -Wall -Werror)
-  target_compile_options(${TARGET} PRIVATE "$<$<NOT:$<CONFIG:Debug>>:-O3>")
-  target_compile_definitions(${TARGET} PRIVATE "$<$<NOT:$<CONFIG:Debug>>:NDEBUG>")
+  target_compile_options(${TARGET} PrivaTE -Wall -Werror)
+  target_compile_options(${TARGET} PrivaTE "$<$<NOT:$<CONFIG:Debug>>:-O3>")
+  target_compile_definitions(${TARGET} PrivaTE "$<$<NOT:$<CONFIG:Debug>>:NDEBUG>")
 endfunction()
 
 # Flutter library and tool build rules.
@@ -71,8 +71,8 @@ add_executable(${BINARY_NAME}
 apply_standard_settings(${BINARY_NAME})
 
 # Add dependency libraries. Add any application-specific dependencies here.
-target_link_libraries(${BINARY_NAME} PRIVATE flutter)
-target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::GTK)
+target_link_libraries(${BINARY_NAME} PrivaTE flutter)
+target_link_libraries(${BINARY_NAME} PrivaTE PkgConfig::GTK)
 
 # Run the Flutter tool portions of the build. This must not be removed.
 add_dependencies(${BINARY_NAME} flutter_assemble)

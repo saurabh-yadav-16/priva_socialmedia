@@ -39,7 +39,7 @@ class LandingScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(15.0),
               child: Text(
-                "Don't let your secrets become a leak, with Priva, your privacy is strong and sleek.",
+                "Don't let your secrets become a leak, with Priva, your Privacy is strong and sleek.",
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 17,

@@ -76,7 +76,7 @@ class WindowClassRegistrar {
   // instances of the window.
   void UnregisterWindowClass();
 
- private:
+ Private:
   WindowClassRegistrar() = default;
 
   static WindowClassRegistrar* instance_;

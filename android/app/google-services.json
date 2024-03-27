@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "511736524993",
-    "project_id": "priva-socialmedia",
-    "storage_bucket": "priva-socialmedia.appspot.com"
+    "project_id": "Priva-socialmedia",
+    "storage_bucket": "Priva-socialmedia.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:511736524993:android:1b5ee9d5fcba00d664e440",
         "android_client_info": {
-          "package_name": "com.priva.socialmedia"
+          "package_name": "com.Priva.socialmedia"
         }
       },
       "oauth_client": [],

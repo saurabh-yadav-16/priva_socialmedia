@@ -71,7 +71,7 @@ class Win32Window {
   // Called when Destroy is called.
   virtual void OnDestroy();
 
- private:
+ Private:
   friend class WindowClassRegistrar;
 
   // OS callback called by message pump. Handles the WM_NCCREATE message which

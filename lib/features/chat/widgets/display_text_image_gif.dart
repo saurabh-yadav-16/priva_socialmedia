@@ -54,12 +54,19 @@ class DisplayTextImageGIF extends StatelessWidget {
                 ? VideoPlayerItem(
                     videoUrl: message,
                   )
-                : type == MessageEnum.gif
-                    ? CachedNetworkImage(
-                        imageUrl: message,
-                      )
-                    : CachedNetworkImage(
-                        imageUrl: message,
-                      );
+                : Container(
+                    // Wrapping with Container
+                    width: MediaQuery.of(context).size.width *
+                        0.7, // 70% of screen width
+                    height: MediaQuery.of(context).size.width *
+                        0.7, // 70% of screen height
+                    child: type == MessageEnum.gif
+                        ? CachedNetworkImage(
+                            imageUrl: message,
+                          )
+                        : CachedNetworkImage(
+                            imageUrl: message,
+                          ),
+                  );
   }
 }

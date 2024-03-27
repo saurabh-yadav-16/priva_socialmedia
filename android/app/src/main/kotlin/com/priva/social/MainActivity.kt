@@ -1,4 +1,4 @@
-package com.example.priva_socialmedia
+package com.priva.social
 
 import io.flutter.embedding.android.FlutterActivity
 

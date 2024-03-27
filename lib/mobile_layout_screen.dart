@@ -20,6 +20,7 @@ class MobileLayoutScreen extends ConsumerStatefulWidget {
 class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
     with WidgetsBindingObserver, TickerProviderStateMixin {
   late TabController tabBarController;
+
   @override
   void initState() {
     super.initState();
@@ -30,6 +31,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
   @override
   void dispose() {
     super.dispose();
+    tabBarController.dispose();
     WidgetsBinding.instance.removeObserver(this);
   }
 
@@ -58,12 +60,18 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
           elevation: 0,
           backgroundColor: appBarColor,
           centerTitle: false,
-          title: const Text(
-            'Priva',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
+          title: Hero(
+            tag: 'appBarTitle',
+            child: Material(
+              color: Colors.transparent,
+              child: Text(
+                'Priva',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
           actions: [
@@ -78,12 +86,10 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
               ),
               itemBuilder: (context) => [
                 PopupMenuItem(
-                  child: const Text(
-                    'Create Group',
-                  ),
-                  onTap: () => Future(
-                    () => Navigator.pushNamed(
-                        context, CreateGroupScreen.routeName),
+                  child: const Text('Create Group'),
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    CreateGroupScreen.routeName,
                   ),
                 )
               ],
@@ -100,13 +106,34 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
             ),
             tabs: const [
               Tab(
-                text: 'CHATS',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.chat),
+                    SizedBox(width: 5),
+                    Text('CHATS'),
+                  ],
+                ),
               ),
               Tab(
-                text: 'STATUS',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.rss_feed),
+                    SizedBox(width: 5),
+                    Text('FEED'),
+                  ],
+                ),
               ),
               Tab(
-                text: 'CALLS',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.phone),
+                    SizedBox(width: 5),
+                    Text('CALLS'),
+                  ],
+                ),
               ),
             ],
           ),
@@ -116,7 +143,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
           children: const [
             ContactsList(),
             StatusContactsScreen(),
-            Text('Calls')
+            Text('Calls'),
           ],
         ),
         floatingActionButton: FloatingActionButton(

@@ -46,7 +46,7 @@ class SelectContactRepository {
           isFound = true;
           Navigator.pushNamed(
             context,
-            e,
+            MobileChatScreen.routeName,
             arguments: {
               'isGroupChat': false,
               'name': userData.name,

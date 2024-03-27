@@ -29,95 +29,78 @@ class MyMessageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isReplying = repliedText.isNotEmpty;
+    final double screenWidth = MediaQuery.of(context).size.width;
+    final double minCardWidth = 150.0; // Minimum width to display time
 
     return SwipeTo(
       onLeftSwipe: (details) => onLeftSwipe(details),
       child: Align(
         alignment: Alignment.centerRight,
-        child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: MediaQuery.of(context).size.width - 45,
-          ),
-          child: Card(
-            elevation: 1,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            color: messageColor,
-            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-            child: Stack(
-              children: [
-                Padding(
-                  padding: type == MessageEnum.text
-                      ? const EdgeInsets.only(
-                          left: 10,
-                          right: 30,
-                          top: 5,
-                          bottom: 20,
-                        )
-                      : const EdgeInsets.only(
-                          left: 5,
-                          top: 5,
-                          right: 5,
-                          bottom: 25,
-                        ),
-                  child: Column(
-                    children: [
-                      if (isReplying) ...[
-                        Text(
-                          username,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 3),
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: backgroundColor.withOpacity(0.5),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(
-                                5,
-                              ),
-                            ),
-                          ),
-                          child: DisplayTextImageGIF(
-                            message: repliedText,
-                            type: repliedMessageType,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                      ],
-                      DisplayTextImageGIF(
-                        message: message,
-                        type: type,
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
-                  bottom: 4,
-                  right: 10,
-                  child: Row(
-                    children: [
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minWidth: minCardWidth,
+              maxWidth: screenWidth *
+                  0.8, // Adjusted to take up 80% of the screen width
+            ),
+            child: Card(
+              elevation: 1,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8)),
+              color: messageColor,
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (isReplying) ...[
                       Text(
-                        date,
+                        username,
                         style: const TextStyle(
-                          fontSize: 13,
-                          color: Colors.white60,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(
-                        width: 5,
+                      const SizedBox(height: 3),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: backgroundColor.withOpacity(0.5),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(5),
+                          ),
+                        ),
+                        child: DisplayTextImageGIF(
+                          message: repliedText,
+                          type: repliedMessageType,
+                        ),
                       ),
-                      Icon(
-                        isSeen ? Icons.done_all : Icons.done,
-                        size: 20,
-                        color: isSeen ? Colors.blue : Colors.white60,
-                      ),
+                      const SizedBox(height: 8),
                     ],
-                  ),
+                    DisplayTextImageGIF(
+                      message: message,
+                      type: type,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          date,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            color: Colors.white60,
+                          ),
+                        ),
+                        Icon(
+                          isSeen ? Icons.done_all : Icons.done,
+                          size: 20,
+                          color: isSeen ? Colors.blue : Colors.white60,
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         ),

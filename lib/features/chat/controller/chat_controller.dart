@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:priva_socialmedia/common/enums/message_enum.dart';
 import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
 import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/features/chat/repository/chat_repository.dart';
+import 'package:priva_socialmedia/features/chat/repositories/chat_repository.dart';
 import 'package:priva_socialmedia/models/chat_contact.dart';
 import 'package:priva_socialmedia/models/group.dart';
 import 'package:priva_socialmedia/models/message.dart';

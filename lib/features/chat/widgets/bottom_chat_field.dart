@@ -5,12 +5,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_sound/public/flutter_sound_recorder.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/enums/message_enum.dart';
-import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/features/chat/controller/chat_controller.dart';
-import 'package:priva_socialmedia/features/chat/widgets/message_reply_preview.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/enums/message_enum.dart';
+import 'package:Priva/common/providers/message_reply_provider.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/features/chat/controller/chat_controller.dart';
+import 'package:Priva/features/chat/widgets/message_reply_preview.dart';
 
 // Import statements...
 

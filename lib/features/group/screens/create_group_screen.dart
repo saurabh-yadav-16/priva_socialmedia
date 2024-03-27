@@ -2,10 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/features/group/controller/group_controller.dart';
-import 'package:priva_socialmedia/features/group/widgets/select_contacts_group.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/features/group/controller/group_controller.dart';
+import 'package:Priva/features/group/widgets/select_contacts_group.dart';
 
 class CreateGroupScreen extends ConsumerStatefulWidget {
   static const String routeName = '/create-group';

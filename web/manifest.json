@@ -1,6 +1,6 @@
 {
-    "name": "priva_socialmedia",
-    "short_name": "priva_socialmedia",
+    "name": "Priva",
+    "short_name": "Priva",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

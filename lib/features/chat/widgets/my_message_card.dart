@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:swipe_to/swipe_to.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/enums/message_enum.dart';
-import 'package:priva_socialmedia/features/chat/widgets/display_text_image_gif.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/enums/message_enum.dart';
+import 'package:Priva/features/chat/widgets/display_text_image_gif.dart';
 
 class MyMessageCard extends StatelessWidget {
   final String message;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/widgets/loader.dart';
-import 'package:priva_socialmedia/features/status/controller/status_controller.dart';
-import 'package:priva_socialmedia/features/status/screens/status_screen.dart';
-import 'package:priva_socialmedia/models/status_model.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/widgets/loader.dart';
+import 'package:Priva/features/status/controller/status_controller.dart';
+import 'package:Priva/features/status/screens/status_screen.dart';
+import 'package:Priva/models/status_model.dart';
 
 class StatusContactsScreen extends ConsumerWidget {
   const StatusContactsScreen({Key? key}) : super(key: key);

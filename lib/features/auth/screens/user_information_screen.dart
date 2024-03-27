@@ -4,8 +4,8 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
 
 class UserInformationScreen extends ConsumerStatefulWidget {
   static const String routeName = '/user-information';

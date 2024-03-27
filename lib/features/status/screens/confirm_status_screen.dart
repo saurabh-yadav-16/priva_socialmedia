@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/features/status/controller/status_controller.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/features/status/controller/status_controller.dart';
 
 class ConfirmStatusScreen extends ConsumerWidget {
   static const String routeName = '/confirm-status-screen';

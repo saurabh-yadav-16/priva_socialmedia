@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/widgets/custom_button.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
+import 'package:Priva/common/widgets/custom_button.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
+import 'package:Priva/common/utils/colors.dart';
 
 class OTPScreen extends ConsumerWidget {
   static const String routeName = '/otp-screen';

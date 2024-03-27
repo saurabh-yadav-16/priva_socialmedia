@@ -3,9 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/features/call/repository/call_repository.dart';
-import 'package:priva_socialmedia/models/call.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
+import 'package:Priva/features/call/repository/call_repository.dart';
+import 'package:Priva/models/call.dart';
 
 final callControllerProvider = Provider((ref) {
   final callRepository = ref.read(callRepositoryProvider);

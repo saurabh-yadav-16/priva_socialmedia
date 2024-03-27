@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/features/call/controller/call_controller.dart';
-import 'package:priva_socialmedia/features/call/screens/call_screen.dart';
-import 'package:priva_socialmedia/models/call.dart';
+import 'package:Priva/features/call/controller/call_controller.dart';
+import 'package:Priva/features/call/screens/call_screen.dart';
+import 'package:Priva/models/call.dart';
 
 class CallPickupScreen extends ConsumerWidget {
   final Widget scaffold;

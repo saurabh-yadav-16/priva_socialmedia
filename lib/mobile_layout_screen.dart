@@ -1,14 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/features/group/screens/create_group_screen.dart';
-import 'package:priva_socialmedia/features/select_contacts/screens/select_contacts_screen.dart';
-import 'package:priva_socialmedia/features/chat/widgets/contacts_list.dart';
-import 'package:priva_socialmedia/features/status/screens/confirm_status_screen.dart';
-import 'package:priva_socialmedia/features/status/screens/status_contacts_screen.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
+import 'package:Priva/features/group/screens/create_group_screen.dart';
+import 'package:Priva/features/select_contacts/screens/select_contacts_screen.dart';
+import 'package:Priva/features/chat/widgets/contacts_list.dart';
+import 'package:Priva/features/status/screens/confirm_status_screen.dart';
+import 'package:Priva/features/status/screens/status_contacts_screen.dart';
 
 class MobileLayoutScreen extends ConsumerStatefulWidget {
   const MobileLayoutScreen({Key? key}) : super(key: key);

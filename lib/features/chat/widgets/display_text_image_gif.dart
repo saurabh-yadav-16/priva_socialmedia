@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:priva_socialmedia/common/enums/message_enum.dart';
-import 'package:priva_socialmedia/features/chat/widgets/video_player_item.dart';
+import 'package:Priva/common/enums/message_enum.dart';
+import 'package:Priva/features/chat/widgets/video_player_item.dart';
 
 class DisplayTextImageGIF extends StatefulWidget {
   final String message;

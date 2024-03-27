@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
-import 'package:priva_socialmedia/common/repository/common_firebase_storage_repository.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/models/group.dart' as model;
+import 'package:Priva/common/repository/common_firebase_storage_repository.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/models/group.dart' as model;
 
 final groupRepositoryProvider = Provider(
   (ref) => GroupRepository(

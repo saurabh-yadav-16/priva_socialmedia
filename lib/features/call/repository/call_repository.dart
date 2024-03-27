@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/features/call/screens/call_screen.dart';
-import 'package:priva_socialmedia/models/call.dart';
-import 'package:priva_socialmedia/models/group.dart' as model;
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/features/call/screens/call_screen.dart';
+import 'package:Priva/models/call.dart';
+import 'package:Priva/models/group.dart' as model;
 
 final callRepositoryProvider = Provider(
   (ref) => CallRepository(

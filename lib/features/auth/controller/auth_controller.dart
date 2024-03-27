@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/features/auth/repository/auth_repository.dart';
-import 'package:priva_socialmedia/models/user_model.dart';
+import 'package:Priva/features/auth/repository/auth_repository.dart';
+import 'package:Priva/models/user_model.dart';
 
 final authControllerProvider = Provider((ref) {
   final authRepository = ref.watch(authRepositoryProvider);

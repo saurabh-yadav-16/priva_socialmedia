@@ -4,14 +4,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
-import 'package:priva_socialmedia/common/enums/message_enum.dart';
-import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
-import 'package:priva_socialmedia/common/repository/common_firebase_storage_repository.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/models/chat_contact.dart';
-import 'package:priva_socialmedia/models/group.dart';
-import 'package:priva_socialmedia/models/message.dart';
-import 'package:priva_socialmedia/models/user_model.dart';
+import 'package:Priva/common/enums/message_enum.dart';
+import 'package:Priva/common/providers/message_reply_provider.dart';
+import 'package:Priva/common/repository/common_firebase_storage_repository.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/models/chat_contact.dart';
+import 'package:Priva/models/group.dart';
+import 'package:Priva/models/message.dart';
+import 'package:Priva/models/user_model.dart';
 
 final chatRepositoryProvider = Provider(
   (ref) => ChatRepository(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/contact.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:priva_socialmedia/features/select_contacts/repository/select_contact_repository.dart';
+import 'package:Priva/features/select_contacts/repository/select_contact_repository.dart';
 
 final getContactsProvider = FutureProvider((ref) {
   final selectContactRepository = ref.watch(selectContactsRepositoryProvider);

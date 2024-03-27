@@ -1,14 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/widgets/error.dart';
-import 'package:priva_socialmedia/common/widgets/loader.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
-import 'package:priva_socialmedia/firebase_options.dart';
-import 'package:priva_socialmedia/router.dart';
-import 'package:priva_socialmedia/mobile_layout_screen.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/widgets/error.dart';
+import 'package:Priva/common/widgets/loader.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
+import 'package:Priva/features/landing/screens/landing_screen.dart';
+import 'package:Priva/firebase_options.dart';
+import 'package:Priva/router.dart';
+import 'package:Priva/mobile_layout_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

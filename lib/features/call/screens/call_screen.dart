@@ -1,11 +1,11 @@
 import 'package:agora_uikit/agora_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/widgets/loader.dart';
-import 'package:priva_socialmedia/config/agora_config.dart';
-import 'package:priva_socialmedia/features/call/controller/call_controller.dart';
+import 'package:Priva/common/widgets/loader.dart';
+import 'package:Priva/config/agora_config.dart';
+import 'package:Priva/features/call/controller/call_controller.dart';
 
-import 'package:priva_socialmedia/models/call.dart';
+import 'package:Priva/models/call.dart';
 
 class CallScreen extends ConsumerStatefulWidget {
   final String channelId;

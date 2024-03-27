@@ -4,12 +4,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/repository/common_firebase_storage_repository.dart';
-import 'package:priva_socialmedia/common/utils/utils.dart';
-import 'package:priva_socialmedia/features/auth/screens/otp_screen.dart';
-import 'package:priva_socialmedia/features/auth/screens/user_information_screen.dart';
-import 'package:priva_socialmedia/models/user_model.dart';
-import 'package:priva_socialmedia/mobile_layout_screen.dart';
+import 'package:Priva/common/repository/common_firebase_storage_repository.dart';
+import 'package:Priva/common/utils/utils.dart';
+import 'package:Priva/features/auth/screens/otp_screen.dart';
+import 'package:Priva/features/auth/screens/user_information_screen.dart';
+import 'package:Priva/models/user_model.dart';
+import 'package:Priva/mobile_layout_screen.dart';
 
 final authRepositoryProvider = Provider(
   (ref) => AuthRepository(

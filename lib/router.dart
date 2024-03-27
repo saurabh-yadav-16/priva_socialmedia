@@ -1,17 +1,17 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/common/widgets/error.dart';
-import 'package:priva_socialmedia/features/auth/screens/login_screen.dart';
-import 'package:priva_socialmedia/features/auth/screens/otp_screen.dart';
-import 'package:priva_socialmedia/features/auth/screens/user_information_screen.dart';
-import 'package:priva_socialmedia/features/group/screens/create_group_screen.dart';
-import 'package:priva_socialmedia/features/select_contacts/screens/select_contacts_screen.dart';
-import 'package:priva_socialmedia/features/chat/screens/mobile_chat_screen.dart';
-import 'package:priva_socialmedia/features/status/screens/confirm_status_screen.dart';
-import 'package:priva_socialmedia/features/status/screens/status_screen.dart';
-import 'package:priva_socialmedia/models/status_model.dart';
-import 'package:priva_socialmedia/features/landing/screens/landing_screen.dart';
+import 'package:Priva/common/widgets/error.dart';
+import 'package:Priva/features/auth/screens/login_screen.dart';
+import 'package:Priva/features/auth/screens/otp_screen.dart';
+import 'package:Priva/features/auth/screens/user_information_screen.dart';
+import 'package:Priva/features/group/screens/create_group_screen.dart';
+import 'package:Priva/features/select_contacts/screens/select_contacts_screen.dart';
+import 'package:Priva/features/chat/screens/mobile_chat_screen.dart';
+import 'package:Priva/features/status/screens/confirm_status_screen.dart';
+import 'package:Priva/features/status/screens/status_screen.dart';
+import 'package:Priva/models/status_model.dart';
+import 'package:Priva/features/landing/screens/landing_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {

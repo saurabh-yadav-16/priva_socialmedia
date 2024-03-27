@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/widgets/loader.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/features/call/controller/call_controller.dart';
-import 'package:priva_socialmedia/features/call/screens/call_pickup_screen.dart';
-import 'package:priva_socialmedia/features/chat/widgets/bottom_chat_field.dart';
-import 'package:priva_socialmedia/models/user_model.dart';
-import 'package:priva_socialmedia/features/chat/widgets/chat_list.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/widgets/loader.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
+import 'package:Priva/features/call/controller/call_controller.dart';
+import 'package:Priva/features/call/screens/call_pickup_screen.dart';
+import 'package:Priva/features/chat/widgets/bottom_chat_field.dart';
+import 'package:Priva/models/user_model.dart';
+import 'package:Priva/features/chat/widgets/chat_list.dart';
 
 class MobileChatScreen extends ConsumerWidget {
   static const String routeName = '/mobile-chat-screen';

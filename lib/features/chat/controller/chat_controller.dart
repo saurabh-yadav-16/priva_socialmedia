@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/common/enums/message_enum.dart';
-import 'package:priva_socialmedia/common/providers/message_reply_provider.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
-import 'package:priva_socialmedia/features/chat/repositories/chat_repository.dart';
-import 'package:priva_socialmedia/models/chat_contact.dart';
-import 'package:priva_socialmedia/models/group.dart';
-import 'package:priva_socialmedia/models/message.dart';
+import 'package:Priva/common/enums/message_enum.dart';
+import 'package:Priva/common/providers/message_reply_provider.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
+import 'package:Priva/features/chat/repositories/chat_repository.dart';
+import 'package:Priva/models/chat_contact.dart';
+import 'package:Priva/models/group.dart';
+import 'package:Priva/models/message.dart';
 
 final chatControllerProvider = Provider((ref) {
   final chatRepository = ref.watch(chatRepositoryProvider);

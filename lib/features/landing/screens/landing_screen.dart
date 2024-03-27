@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:priva_socialmedia/common/widgets/custom_button.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/features/auth/screens/login_screen.dart';
+import 'package:Priva/common/widgets/custom_button.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/features/auth/screens/login_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);

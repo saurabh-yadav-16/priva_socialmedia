@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/contact.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:priva_socialmedia/features/group/repository/group_repository.dart';
+import 'package:Priva/features/group/repository/group_repository.dart';
 
 final groupControllerProvider = Provider((ref) {
   final groupRepository = ref.read(groupRepositoryProvider);

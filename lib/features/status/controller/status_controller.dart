@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:priva_socialmedia/features/auth/controller/auth_controller.dart';
+import 'package:Priva/features/auth/controller/auth_controller.dart';
 
-import 'package:priva_socialmedia/features/status/repository/status_repository.dart';
-import 'package:priva_socialmedia/models/status_model.dart';
+import 'package:Priva/features/status/repository/status_repository.dart';
+import 'package:Priva/models/status_model.dart';
 
 final statusControllerProvider = Provider((ref) {
   final statusRepository = ref.read(statusRepositoryProvider);

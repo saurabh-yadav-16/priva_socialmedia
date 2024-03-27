@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:priva_socialmedia/common/utils/colors.dart';
-import 'package:priva_socialmedia/common/widgets/loader.dart';
-import 'package:priva_socialmedia/features/chat/controller/chat_controller.dart';
-import 'package:priva_socialmedia/features/chat/screens/mobile_chat_screen.dart';
-import 'package:priva_socialmedia/models/chat_contact.dart';
-import 'package:priva_socialmedia/models/group.dart';
+import 'package:Priva/common/utils/colors.dart';
+import 'package:Priva/common/widgets/loader.dart';
+import 'package:Priva/features/chat/controller/chat_controller.dart';
+import 'package:Priva/features/chat/screens/mobile_chat_screen.dart';
+import 'package:Priva/models/chat_contact.dart';
+import 'package:Priva/models/group.dart';
 
 class ContactsList extends ConsumerWidget {
   const ContactsList({Key? key}) : super(key: key);

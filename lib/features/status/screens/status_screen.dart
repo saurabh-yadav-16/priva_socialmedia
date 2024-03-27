@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
-import 'package:priva_socialmedia/common/widgets/loader.dart';
+import 'package:Priva/common/widgets/loader.dart';
 
-import 'package:priva_socialmedia/models/status_model.dart';
+import 'package:Priva/models/status_model.dart';
 
 class StatusScreen extends StatefulWidget {
   static const String routeName = '/status-screen';

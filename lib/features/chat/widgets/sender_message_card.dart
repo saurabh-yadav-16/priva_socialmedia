@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swipe_to/swipe_to.dart';
+
 import 'package:Priva/common/utils/colors.dart';
 import 'package:Priva/common/enums/message_enum.dart';
 import 'package:Priva/features/chat/widgets/display_text_image_gif.dart';
@@ -28,7 +29,7 @@ class SenderMessageCard extends StatelessWidget {
     final isReplying = repliedText.isNotEmpty;
 
     return SwipeTo(
-      onRightSwipe: (details) => onRightSwipe(details),
+      onRightSwipe: (details) => onRightSwipe,
       child: Align(
         alignment: Alignment.centerLeft,
         child: ConstrainedBox(

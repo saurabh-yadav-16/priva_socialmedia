@@ -119,7 +119,7 @@ class ChatRepository {
         'timeSent': DateTime.now().millisecondsSinceEpoch,
       });
     } else {
-      // users -> reciever user id => chats -> current user id -> set data
+// users -> reciever user id => chats -> current user id -> set data
       var recieverChatContact = ChatContact(
         name: senderUserData.name,
         profilePic: senderUserData.profilePic,
@@ -227,7 +227,6 @@ class ChatRepository {
     required MessageReply? messageReply,
     required bool isGroupChat,
   }) async {
-    // users -> sender id -> reciever id -> messages -> message id -> store message
     try {
       var timeSent = DateTime.now();
       UserModel? recieverUserData;

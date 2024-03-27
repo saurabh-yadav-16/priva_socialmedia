@@ -54,9 +54,9 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBzaUSOC7TLG4VgMRS6X_AwDkrLs6iRE60',
-    appId: '1:511736524993:android:1b5ee9d5fcba00d664e440',
+    appId: '1:511736524993:android:0afdcd0f65f3230a64e440',
     messagingSenderId: '511736524993',
-    projectId: 'Priva-socialmedia',
-    storageBucket: 'Priva-socialmedia.appspot.com',
+    projectId: 'priva-socialmedia',
+    storageBucket: 'priva-socialmedia.appspot.com',
   );
 }

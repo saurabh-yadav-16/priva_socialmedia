@@ -36,6 +36,7 @@ class StatusContactsScreen extends ConsumerWidget {
                     child: ListTile(
                       title: Text(
                         statusData.username,
+                        style: TextStyle(),
                       ),
                       leading: CircleAvatar(
                         backgroundImage: NetworkImage(
